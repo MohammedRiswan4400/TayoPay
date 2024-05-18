@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tayo_pay/screens/authentication/screen_get_start/widgets/widgets.dart';
 
-import '../../../controller/functions/auth_functions.dart';
 import '../../../core/colors/colors.dart';
 import '../../../core/constant/const.dart';
 import 'widgets/widgets.dart';

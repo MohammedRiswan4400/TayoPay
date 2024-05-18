@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:tayo_pay/controller/functions/auth_functions.dart';
 import 'package:tayo_pay/controller/functions/goto_functions.dart';
 import 'package:tayo_pay/core/colors/colors.dart';
 import 'package:tayo_pay/core/constant/const.dart';
 import 'package:tayo_pay/model/user/user_model.dart';
 import 'package:tayo_pay/screens/widgets/snack_bar.dart';
 
-import '../../splash/screen_splash.dart';
 import '../screen_home/widgets/widgets.dart';
 import '../screen_profile/bloc/profile_bloc.dart';
 import 'widgets/widgets.dart';

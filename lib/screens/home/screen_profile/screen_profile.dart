@@ -14,17 +14,17 @@ class ScreenProfile extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
-              SizedBox(height: 10),
-              TextWidgetWithInterFont(
+              const SizedBox(height: 10),
+              const TextWidgetWithInterFont(
                 title: 'Profile',
                 color: kDarkBlue,
                 size: 22,
                 weight: FontWeight.w600,
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               ProfileScreenListTile(
                   title: 'First Name', text: profileModel.data!.firstName!),
               ProfileScreenListTile(
@@ -35,8 +35,9 @@ class ScreenProfile extends StatelessWidget {
                   title: 'Email', text: profileModel.data!.email!),
               ProfileScreenListTile(
                   title: 'Mobile', text: '+${profileModel.data!.mobilePhone!}'),
-              ProfileScreenListTile(title: 'Gender', text: 'Male'),
-              ProfileScreenListTile(title: 'Date of Birth', text: '2001/04/17'),
+              const ProfileScreenListTile(title: 'Gender', text: 'Male'),
+              const ProfileScreenListTile(
+                  title: 'Date of Birth', text: '2001/04/17'),
             ],
           ),
         ),

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tayo_pay/screens/authentication/screen_login.dart/screen_login.dart';
 import 'package:tayo_pay/screens/authentication/screen_signup_success/screen_signup_success.dart';
 import 'package:tayo_pay/screens/home/screen_profile/screen_profile.dart';
 
+import '../../screens/authentication/screen_get_start/screen_get_start.dart';
 import '../../screens/authentication/screen_sign_up/screen_sign_up.dart';
 import '../../screens/home/botom_navigation/bottom_navigation.dart';
+import '../auth/auth_controller.dart';
 
 // Screen Navigations
 class GotoScreenNavigations {
@@ -97,3 +100,40 @@ class GotoScreenNavigations {
 //     ),
 //   );
 // }
+
+// Slash functions
+
+Future gotoScreens(context) async {
+  await Future.delayed(const Duration(seconds: 3));
+  Navigator.of(context).pushReplacement(
+    MaterialPageRoute(
+      builder: (context) {
+        return const ScreenGetStart();
+      },
+    ),
+  );
+}
+
+gotoMainScreen() async {
+  Future.delayed(
+    const Duration(
+      seconds: 3,
+    ),
+  ).then(
+    (value) {
+      Get.put(AuthController());
+    },
+  );
+}
+
+gotoMainScreenWithoutDelay() async {
+  Future.delayed(
+    const Duration(
+      seconds: 2,
+    ),
+  ).then(
+    (value) {
+      Get.offAll(const ScreenGetStart());
+    },
+  );
+}

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:tayo_pay/screens/authentication/screen_get_start/screen_get_start.dart';
-import '../../controller/auth/auth_controller.dart';
+import '../../controller/functions/goto_functions.dart';
 import '../../core/constant/const.dart';
 
 class ScreenSplash extends StatelessWidget {
@@ -28,39 +26,4 @@ class ScreenSplash extends StatelessWidget {
       ),
     );
   }
-}
-
-Future gotoScreens(context) async {
-  await Future.delayed(const Duration(seconds: 3));
-  Navigator.of(context).pushReplacement(
-    MaterialPageRoute(
-      builder: (context) {
-        return const ScreenGetStart();
-      },
-    ),
-  );
-}
-
-gotoMainScreen() async {
-  Future.delayed(
-    const Duration(
-      seconds: 3,
-    ),
-  ).then(
-    (value) {
-      Get.put(AuthController());
-    },
-  );
-}
-
-gotoMainScreenWithoutDelay() async {
-  Future.delayed(
-    const Duration(
-      seconds: 2,
-    ),
-  ).then(
-    (value) {
-      Get.offAll(const ScreenGetStart());
-    },
-  );
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/colors/colors.dart';
-import '../screen_profile/bloc/profile_bloc.dart';
 
 ValueNotifier<int> indexChangeNotifier = ValueNotifier(0);
 
